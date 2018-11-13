@@ -21,10 +21,10 @@ public class board
         boolean color;
         for(int i = 0; i < 8; i++){
             for(int j = 0; j < 8; j++){
-                this.playingBoard[i][j] = new boardField(white, "A"+(j+1), new figure()   );  
+                this.playingBoard[i][j] = new boardField(white, "A"+(j+1));  
                 
                 if( (i+j)%2 != 0    ){
-                    this.playingBoard[i][j] = new boardField(black, "A"+(j+1), new figure()   );  
+                    this.playingBoard[i][j] = new boardField(black, "A"+(j+1));  
                 }
             }
         }
