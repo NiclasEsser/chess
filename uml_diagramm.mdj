@@ -469,7 +469,7 @@
 											"model": {
 												"$ref": "AAAAAAFnDpPCmx6/ick="
 											},
-											"font": "Arial;13;0",
+											"font": "Arial;13;2",
 											"left": 741,
 											"top": 370,
 											"width": 143,
@@ -486,7 +486,7 @@
 											"model": {
 												"$ref": "AAAAAAFnDoKEtx5OIXk="
 											},
-											"font": "Arial;13;0",
+											"font": "Arial;13;2",
 											"left": 741,
 											"top": 385,
 											"width": 143,
@@ -503,7 +503,7 @@
 											"model": {
 												"$ref": "AAAAAAFnDoVyyR5a+rM="
 											},
-											"font": "Arial;13;0",
+											"font": "Arial;13;2",
 											"left": 741,
 											"top": 400,
 											"width": 143,
@@ -8061,7 +8061,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFnDmCplB3m+mQ="
 							},
-							"name": "Figure"
+							"name": "Figure",
+							"isAbstract": true
 						},
 						{
 							"_type": "UMLOperation",
@@ -8069,7 +8070,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFnDmCplB3m+mQ="
 							},
-							"name": "render"
+							"name": "render",
+							"isAbstract": true
 						},
 						{
 							"_type": "UMLOperation",
@@ -8077,7 +8079,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFnDmCplB3m+mQ="
 							},
-							"name": "allowedMovement"
+							"name": "allowedMovement",
+							"isAbstract": true
 						}
 					],
 					"isAbstract": true
