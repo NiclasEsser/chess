@@ -1,33 +1,15 @@
-
-/**
- * Beschreiben Sie hier die Klasse player.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
 public class player
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    private String name;
+    private boolean color;
+    private int zuege = 0;
 
-    /**
-     * Konstruktor für Objekte der Klasse player
-     */
-    public player()
+    public player(boolean color, String name)
     {
-        // Instanzvariable initialisieren
-        x = 0;
+        this.color = color;
+        this.name = name;
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
-    }
+    
 }

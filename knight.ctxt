@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=knight
+comment1.params=color
+comment1.target=knight(boolean)
+comment2.params=
+comment2.target=char\ getChar()
+comment3.params=
+comment3.target=boolean\ getColor()
+comment4.params=feld
+comment4.target=boolean\ movement(int[])
+numComments=5

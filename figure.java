@@ -1,20 +1,8 @@
-
-/**
- * Beschreiben Sie hier die Klasse figure.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
-public class figure
+public interface figure
 {  
-    private char display = 'a';
+    boolean color = false;
     
-    public figure()
-    {
-       
-    }
-    
-    public char getChar(){
-        return this.display;
-    }
+    public boolean getColor();
+    public char getChar();
+    public boolean movement(int[] feld);
 }

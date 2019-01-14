@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Ui
+comment1.params=
+comment1.target=Ui()
+comment2.params=y\ x\ f
+comment2.target=int\ render(int,\ int,\ java.awt.Frame)
+numComments=3
