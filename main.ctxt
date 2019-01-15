@@ -2,6 +2,4 @@
 comment0.target=main
 comment1.params=
 comment1.target=main()
-comment2.params=x\ y
-comment2.target=java.awt.Frame\ render(int,\ int)
-numComments=3
+numComments=2
