@@ -10,6 +10,13 @@ public class player
         this.color = color;
         this.name = name;
     }
-
+    
+    public boolean getColor(){
+        return this.color;
+    }
+    
+    public String getName(){
+        return this.name;
+    }
     
 }

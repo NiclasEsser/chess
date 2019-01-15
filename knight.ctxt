@@ -7,5 +7,5 @@ comment2.target=char\ getChar()
 comment3.params=
 comment3.target=boolean\ getColor()
 comment4.params=feld
-comment4.target=boolean\ movement(int[])
+comment4.target=boolean[][]\ movement(board)
 numComments=5

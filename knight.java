@@ -1,4 +1,4 @@
-public class knight implements figure
+public class knight extends figure
 {    
     private boolean color = false;
     
@@ -21,7 +21,8 @@ public class knight implements figure
     }
     
     @Override
-    public boolean movement(int[] feld){
-        return false;
+    public boolean[][] movement(board feld){
+        boolean [][] allowedFields = this.initMoveArray(feld);
+        return allowedFields;
     }
 }

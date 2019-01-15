@@ -32,7 +32,7 @@ public class main extends Ui
        spielbrett.reset();
        
        player player1   = new player(false, "Schwarz");
-       player player2   = new player(false, "Weiss");
+       player player2   = new player(true, "Weiss");
        rules ruleset    = new rules();
        
        while(! ruleset.gameOver()     ){

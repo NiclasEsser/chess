@@ -10,8 +10,10 @@ public class board extends Ui
 {
     private static final boolean black = false;
     private static final boolean white = true;
+    private static int fieldAmountX = 8;
+    private static int fieldAmountY = 8;
+    boardField[][] playingBoard;
     
-    boardField[][] playingBoard = new boardField[8][8];
 
     /**
      * Konstruktor für Objekte der Klasse board
@@ -19,6 +21,8 @@ public class board extends Ui
     public board(int FieldLengthX, int FieldLengthY)
     {
         boolean color;
+        
+        this.playingBoard = new boardField[this.fieldAmountX][this.fieldAmountY];
         for(int i = 0; i < 8; i++){
             for(int j = 0; j < 8; j++){
                 this.playingBoard[i][j] = new boardField(white, "A"+(j+1), FieldLengthX, FieldLengthY);  
@@ -78,5 +82,23 @@ public class board extends Ui
         }
      }
          return 1;
+    }
+    
+    public int[] getBoardSize(){
+        int[] xy = {this.fieldAmountX,this.fieldAmountY}; 
+        return xy;
+    }
+    
+    public int[] name2pos(String name){
+        int x = name.charAt(0)-'A';
+        int y = name.charAt(1)-'0'-1;
+        int[] xy = {x,y};
+        System.out.println("X: "+x+"Y: "+y);
+        return xy;
+    }
+        
+    
+    public boolean moveFigure(){
+        return false;
     }
 }

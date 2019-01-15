@@ -39,6 +39,10 @@ public class boardField extends Ui
         return this.fieldColor;
     }
     
+    public String getName(){
+        return this.name;
+    }
+    
     public void setFigure(figure occupation){
         this.occupation = occupation;
     }
