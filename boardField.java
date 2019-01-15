@@ -69,7 +69,10 @@ public class boardField extends Ui
 
         this.setForeground (Color.BLACK); 
         // Draw a string such that the top-left corner is at x, y
-        g2d.drawString(this.getFigure().getChar()+"", 0, 0+fontMetrics.getAscent());
+        if(this.getFigure() != null)
+        {
+            g2d.drawString(this.getFigure().getChar()+"", 0, 0+fontMetrics.getAscent());
+        }
     }
     
     public int render(){

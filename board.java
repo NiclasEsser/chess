@@ -61,7 +61,7 @@ public class board extends Ui
         
         //Set queens on field
         this.playingBoard[3][0].setFigure( new queen(black)    );
-        this.playingBoard[4][7].setFigure( new queen(white)    );
+        this.playingBoard[3][7].setFigure( new queen(white)    );
     }
         
     public int render(int x, int y, Frame f){
