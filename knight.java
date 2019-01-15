@@ -23,6 +23,8 @@ public class knight extends figure
     @Override
     public boolean[][] movement(board feld){
         boolean [][] allowedFields = this.initMoveArray(feld);
+        //cant move to current field 
+        allowedFields[this.coordinate.x][this.coordinate.y] = false;
         return allowedFields;
     }
 }

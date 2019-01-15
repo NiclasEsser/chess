@@ -14,6 +14,10 @@ public abstract class figure
         this.coordinate = coord;
     }
     
+    public boardCoordinate getCoordinate(){
+        return this.coordinate;
+    }
+    
     public boolean[][] movement(board feld){ 
         return initMoveArray(feld);
     }
