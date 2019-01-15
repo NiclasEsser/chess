@@ -43,9 +43,17 @@ public class boardField extends Ui
         return this.coordinate.name;
     }
     
+    public boardCoordinate getCoordinate(){
+        return this.coordinate;
+    }
+    
     public void setFigure(figure occupation){
         this.occupation = occupation;
         this.occupation.setCoordinate(this.coordinate);
+    }
+    
+    public void removeFigure(){
+        this.occupation = null;
     }
     
     public figure getFigure(){

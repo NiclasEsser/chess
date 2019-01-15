@@ -66,6 +66,10 @@ public class board extends Ui
         //Set queens on field
         this.playingBoard[3][0].setFigure( new queen(black)    );
         this.playingBoard[3][7].setFigure( new queen(white)    );
+        
+        /*moveFigure(playingBoard[1][1], playingBoard[1][3]);
+        moveFigure(playingBoard[2][6], playingBoard[2][4]);
+        moveFigure(playingBoard[1][3], playingBoard[2][4]);*/
     }
         
     public int render(int x, int y, Frame f){
@@ -89,16 +93,25 @@ public class board extends Ui
         return xy;
     }
     
-    public int[] name2pos(String name){
+    /*public int[] name2pos(String name){
         int x = name.charAt(0)-'A';
         int y = name.charAt(1)-'0'-1;
         int[] xy = {x,y};
         System.out.println("X: "+x+"Y: "+y);
         return xy;
-    }
+    }*/
         
     
-    public boolean moveFigure(){
+    public boolean moveFigure(boardField startField, boardField endField){
+        /*figure figure = startField.getFigure();
+        boolean[][] allowedArray = figure.movement(this);
+        int x = endField.getCoordinate().x;
+        int y = endField.getCoordinate().y;
+        if(allowedArray[x][y] == true){
+            startField.removeFigure();
+            endField.removeFigure();
+            endField.setFigure(figure);
+        }*/
         return false;
     }
 }

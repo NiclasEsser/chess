@@ -33,12 +33,12 @@ public class knight extends figure
                 //Generate paris of [2][3] ....to [-2][-3]
                 if(xoff!=yoff){
 					//Check outer boundaries
-                    if(	(x+xoff)<board.getBoardSize()[0] && (x+xoff)<board.getBoardSize()[0]){
+                    if(	(x+xoff)<feld.getBoardSize()[0] && (x+xoff)<feld.getBoardSize()[0]){
 						allowedFields[x+xoff][y+yoff] = true;
 					}
 					
 					//Check outer boundaries
-					if(	(x-xoff)>)0 && (x-xoff)>=0){
+					if(	(x-xoff)>0 && (x-xoff)>=0){
 						allowedFields[x-xoff][y-yoff] = true;
 					}
                 }

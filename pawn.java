@@ -28,7 +28,7 @@ public class pawn extends figure
         int yoff = 1;
         int startposition = 1;
         
-        if(!this.color){
+        if(this.color){
             yoff = -1;
             startposition = 6;
         }
@@ -36,7 +36,7 @@ public class pawn extends figure
         if(!(feld.playingBoard[x][y+yoff].isOccupied())){
             allowedFields[x][y+yoff] = true;
             if(startposition == y){
-                if(feld.playingBoard[x][y+(2*yoff)].isOccupied()){
+                if(!(feld.playingBoard[x][y+(2*yoff)].isOccupied())){
                     allowedFields[x][y+(2*yoff)] = true;
                 }
             }

@@ -9,8 +9,7 @@ comment3.params=x\ y\ f
 comment3.target=int\ render(int,\ int,\ java.awt.Frame)
 comment4.params=
 comment4.target=int[]\ getBoardSize()
-comment5.params=name
-comment5.target=int[]\ name2pos(java.lang.String)
-comment6.params=
-comment6.target=boolean\ moveFigure()
-numComments=7
+comment5.params=startField\ endField
+comment5.target=boolean\ moveFigure(boardField,\ boardField)
+comment5.text=public\ int[]\ name2pos(String\ name){\r\n\ \ \ \ \ \ \ \ int\ x\ \=\ name.charAt(0)-'A';\r\n\ \ \ \ \ \ \ \ int\ y\ \=\ name.charAt(1)-'0'-1;\r\n\ \ \ \ \ \ \ \ int[]\ xy\ \=\ {x,y};\r\n\ \ \ \ \ \ \ \ System.out.println("X\:\ "+x+"Y\:\ "+y);\r\n\ \ \ \ \ \ \ \ return\ xy;\r\n}
+numComments=6
