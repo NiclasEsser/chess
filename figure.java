@@ -1,6 +1,7 @@
 public abstract class figure
 {  
     boolean color = false;
+    private boardCoordinate coordinate;
     
     public boolean getColor(){
         return false;
@@ -8,6 +9,11 @@ public abstract class figure
     public char getChar(){
         return ' ';
     }
+    
+    public void setCoordinate(boardCoordinate coord){
+        this.coordinate = coord;
+    }
+    
     public boolean[][] movement(board feld){ 
         return initMoveArray(feld);
     }

@@ -25,8 +25,10 @@ public class main extends Ui
        this.fieldRenderSize      = 36;
        
        this.spielbrett = new board(fieldRenderSize, fieldRenderSize);
-       //Render Window with frame
+       
+       //Render Window with frame 
        this.window = this.render(this.boardFieldLengthX*this.fieldRenderSize+(2*fieldRenderSize), this.boardFieldLengthY*this.fieldRenderSize+(2*fieldRenderSize));
+       //Board offset by one fieldRenderSize
        this.spielbrett.render(fieldRenderSize, fieldRenderSize, this.window);
        
        spielbrett.reset();

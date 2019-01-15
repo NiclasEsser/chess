@@ -10,19 +10,19 @@ import java.awt.*;
 public class boardField extends Ui
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private figure      occupation;
-    private boolean     fieldColor;
-    private String      name;
-    private int         FieldLengthX;
-    private int         FieldLengthY;
+    private figure              occupation;
+    private boolean             fieldColor;
+    private boardCoordinate     coordinate;
+    private int                 FieldLengthX;
+    private int                 FieldLengthY;
 
     /**
      * Konstruktor für Objekte der Klasse boardField
      */
-    public boardField(boolean color, String name, int FieldLengthX, int FieldLengthY)
+    public boardField(boolean color, boardCoordinate coordinate, int FieldLengthX, int FieldLengthY)
     {
        this.fieldColor     = color;
-       this.name           = name;
+       this.coordinate     = coordinate; 
        this.occupation     = occupation;
        this.FieldLengthX   = FieldLengthX;
        this.FieldLengthY   = FieldLengthY;
@@ -40,11 +40,12 @@ public class boardField extends Ui
     }
     
     public String getName(){
-        return this.name;
+        return this.coordinate.name;
     }
     
     public void setFigure(figure occupation){
         this.occupation = occupation;
+        this.occupation.setCoordinate(this.coordinate);
     }
     
     public figure getFigure(){

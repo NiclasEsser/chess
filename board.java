@@ -23,12 +23,12 @@ public class board extends Ui
         boolean color;
         
         this.playingBoard = new boardField[this.fieldAmountX][this.fieldAmountY];
-        for(int i = 0; i < 8; i++){
-            for(int j = 0; j < 8; j++){
-                this.playingBoard[i][j] = new boardField(white, "A"+(j+1), FieldLengthX, FieldLengthY);  
+        for(int i = 0; i < this.fieldAmountX; i++){
+            for(int j = 0; j < this.fieldAmountY; j++){
+                    this.playingBoard[i][j] = new boardField(white, new boardCoordinate(i,j), FieldLengthX, FieldLengthY);  
                 
                 if( (i+j)%2 != 0    ){
-                    this.playingBoard[i][j] = new boardField(black, "A"+(j+1), FieldLengthX, FieldLengthY);  
+                    this.playingBoard[i][j] = new boardField(black, new boardCoordinate(i,j), FieldLengthX, FieldLengthY);  
                 }
             }
         }

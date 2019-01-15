@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=boardField
-comment1.params=color\ name\ FieldLengthX\ FieldLengthY
-comment1.target=boardField(boolean,\ java.lang.String,\ int,\ int)
+comment1.params=color\ coordinate\ FieldLengthX\ FieldLengthY
+comment1.target=boardField(boolean,\ boardCoordinate,\ int,\ int)
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ boardField\r\n
 comment2.params=
 comment2.target=boolean\ isOccupied()
