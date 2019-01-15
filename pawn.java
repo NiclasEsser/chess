@@ -26,18 +26,20 @@ public class pawn extends figure
         int x = this.getCoordinate().x;
         int y = this.getCoordinate().y;
         int yoff = 1;
+        int startposition = 1;
         
         if(!this.color){
             yoff = -1;
+            startposition = 6;
         }
         // Feld frei, kann besetzt werden
         if(!(feld.playingBoard[x][y+yoff].isOccupied())){
             allowedFields[x][y+yoff] = true;
-            /*if(startposition == current position){
+            if(startposition == y){
                 if(feld.playingBoard[x][y+(2*yoff)].isOccupied()){
                     allowedFields[x][y+(2*yoff)] = true;
                 }
-            }*/
+            }
         }
         // Schlage Gegner diagonal
         for(int i = -1; i <= 1; i=i+2){   
