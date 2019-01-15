@@ -23,8 +23,28 @@ public class knight extends figure
     @Override
     public boolean[][] movement(board feld){
         boolean [][] allowedFields = this.initMoveArray(feld);
-        //cant move to current field 
-        allowedFields[this.coordinate.x][this.coordinate.y] = false;
+        int x = this.getCoordinate().x;
+        int y = this.getCoordinate().y;
+        /*
+         * ---- rules where movement is allowed
+         */
+        for(int xoff = 2; xoff<=3; xoff++){
+            for(int yoff = 2; yoff<=3; yoff++){
+                //Generate paris of [2][3] ....to [-2][-3]
+                if(xoff!=yoff){
+					//Check outer boundaries
+                    if(	(x+xoff)<board.getBoardSize()[0] && (x+xoff)<board.getBoardSize()[0]){
+						allowedFields[x+xoff][y+yoff] = true;
+					}
+					
+					//Check outer boundaries
+					if(	(x-xoff)>)0 && (x-xoff)>=0){
+						allowedFields[x-xoff][y-yoff] = true;
+					}
+                }
+            }
+        }
+        
         return allowedFields;
     }
 }
