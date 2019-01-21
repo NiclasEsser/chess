@@ -1,10 +1,12 @@
-/**
+;/**
  * Beschreiben Sie hier die Klasse board.
  * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
 import java.awt.*;
+import java.awt.event.*;
+import java.awt.geom.Rectangle2D;
 
 public class board extends Ui
 {
@@ -12,26 +14,31 @@ public class board extends Ui
     private static final boolean white = true;
     private static int fieldAmountX = 8;
     private static int fieldAmountY = 8;
+    private int FieldLengthX; 
+    private int FieldLengthY;
     boardField[][] playingBoard;
     
-
+    private boardField startField;
     /**
      * Konstruktor für Objekte der Klasse board
      */
     public board(int FieldLengthX, int FieldLengthY)
     {
         boolean color;
-        
+        this.FieldLengthX = FieldLengthX;
+        this.FieldLengthY = FieldLengthY;
+        this.startField = startField;
         this.playingBoard = new boardField[this.fieldAmountX][this.fieldAmountY];
         for(int i = 0; i < this.fieldAmountX; i++){
             for(int j = 0; j < this.fieldAmountY; j++){
-                    this.playingBoard[i][j] = new boardField(white, new boardCoordinate(i,j), FieldLengthX, FieldLengthY);  
+                    this.playingBoard[i][j] = new boardField(white, new boardCoordinate(i,j), FieldLengthX, FieldLengthY);
                 
                 if( (i+j)%2 != 0    ){
-                    this.playingBoard[i][j] = new boardField(black, new boardCoordinate(i,j), FieldLengthX, FieldLengthY);  
+                    this.playingBoard[i][j] = new boardField(black, new boardCoordinate(i,j), FieldLengthX, FieldLengthY);
                 }
             }
         }
+        //addMouseListener(this);
     }
         
     public void reset(){
@@ -66,15 +73,12 @@ public class board extends Ui
         //Set queens on field
         this.playingBoard[3][0].setFigure( new queen(black)    );
         this.playingBoard[3][7].setFigure( new queen(white)    );
-        
-        /*moveFigure(playingBoard[1][1], playingBoard[1][3]);
-        moveFigure(playingBoard[2][6], playingBoard[2][4]);
-        moveFigure(playingBoard[1][3], playingBoard[2][4]);*/
     }
         
     public int render(int x, int y, Frame f){
-         for(int i = 0; i < 8; i++){
-            for(int j = 0; j < 8; j++){
+         for(int i = 0; i < this.fieldAmountX; i++){
+            for(int j = 0; j < this.fieldAmountY; j++){
+                
                 //Calculate Offsets for each boardfield
                 int fieldPosX = this.playingBoard[i][j].getSize().width*(i+1)+x;
                 int fieldPosY = this.playingBoard[i][j].getSize().height*(j+1)+y;
@@ -82,9 +86,12 @@ public class board extends Ui
                 this.playingBoard[i][j].setLocation(fieldPosX, fieldPosY);
                 
                 this.playingBoard[i][j].render();
-                f.add(this.playingBoard[i][j]);  
-        }
-     }
+                this.playingBoard[i][j].addMouseListener(this);
+                
+                f.add(this.playingBoard[i][j]);
+                
+            }
+         }
          return 1;
     }
     
@@ -99,11 +106,10 @@ public class board extends Ui
         int[] xy = {x,y};
         System.out.println("X: "+x+"Y: "+y);
         return xy;
-    }*/
-        
+    }*/    
     
-    public boolean moveFigure(boardField startField, boardField endField){
-        /*figure figure = startField.getFigure();
+    public void moveFigure(boardField startField, boardField endField){
+        figure figure = startField.getFigure();
         boolean[][] allowedArray = figure.movement(this);
         int x = endField.getCoordinate().x;
         int y = endField.getCoordinate().y;
@@ -111,7 +117,52 @@ public class board extends Ui
             startField.removeFigure();
             endField.removeFigure();
             endField.setFigure(figure);
-        }*/
-        return false;
+        }
     }
+    public boardField getActiveBoardField(){
+        boardField activeField = new boardField(white, new boardCoordinate(-1,-1), FieldLengthX, FieldLengthY);//this.playingBoard[0][0];
+        for(int i = 0; i < this.fieldAmountX; i++){
+           for(int j = 0; j < this.fieldAmountY; j++){
+               if(this.playingBoard[i][j].getActive()){
+                   activeField = this.playingBoard[i][j];
+               }
+            }
+            
+        }
+        return activeField;
+    }
+               
+    @Override
+    public void mousePressed(MouseEvent e) {
+       this.startField = getActiveBoardField();
+       for(int i = 0; i < this.fieldAmountX; i++){
+           for(int j = 0; j < this.fieldAmountY; j++){
+                   this.playingBoard[i][j].setActive(false);
+                   this.playingBoard[i][j].setBackground(new Color(1f,1f,1f,.1f ));
+            }
+        }
+    }
+    
+    
+    @Override
+    public void mouseClicked(MouseEvent e) {
+       boolean[][] allowedArray = new boolean[this.fieldAmountX][this.fieldAmountY];
+       boardField endField = getActiveBoardField();
+       moveFigure(startField, endField);
+       figure figure = getActiveBoardField().getFigure();
+       allowedArray = figure.movement(this);
+       
+       for(int i = 0; i < this.fieldAmountX; i++){
+           for(int j = 0; j < this.fieldAmountY; j++){
+               if(allowedArray[i][j]){
+                   this.playingBoard[i][j].setAllowed(true);
+               }else{
+                    this.playingBoard[i][j].setAllowed(false);
+               }
+               this.playingBoard[i][j].setBackground(new Color(0f,0f,0f));
+           }
+       }
+       
+    }
+   
 }

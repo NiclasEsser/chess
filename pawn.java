@@ -42,10 +42,10 @@ public class pawn extends figure
             }
         }
         // Schlage Gegner diagonal
-        for(int i = -1; i <= 1; i=i+2){   
-            if(feld.playingBoard[x+i][y+yoff].isOccupied() && feld.playingBoard[x+i][y+yoff].getColor() != this.color){
-                allowedFields[x+i][y+yoff] = true;
-            }
+        for(int i = -1; i <= 1; i=i+2){
+                if(feld.playingBoard[x+i][y+yoff].isOccupied() && feld.playingBoard[x+i][y+yoff].getColor() != this.color){
+                    allowedFields[x+i][y+yoff] = true;
+                }
         }
                 
         return allowedFields;

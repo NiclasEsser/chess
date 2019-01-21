@@ -10,6 +10,12 @@ comment3.target=int\ render(int,\ int,\ java.awt.Frame)
 comment4.params=
 comment4.target=int[]\ getBoardSize()
 comment5.params=startField\ endField
-comment5.target=boolean\ moveFigure(boardField,\ boardField)
+comment5.target=void\ moveFigure(boardField,\ boardField)
 comment5.text=public\ int[]\ name2pos(String\ name){\r\n\ \ \ \ \ \ \ \ int\ x\ \=\ name.charAt(0)-'A';\r\n\ \ \ \ \ \ \ \ int\ y\ \=\ name.charAt(1)-'0'-1;\r\n\ \ \ \ \ \ \ \ int[]\ xy\ \=\ {x,y};\r\n\ \ \ \ \ \ \ \ System.out.println("X\:\ "+x+"Y\:\ "+y);\r\n\ \ \ \ \ \ \ \ return\ xy;\r\n}
-numComments=6
+comment6.params=
+comment6.target=boardField\ getActiveBoardField()
+comment7.params=e
+comment7.target=void\ mousePressed(java.awt.event.MouseEvent)
+comment8.params=e
+comment8.target=void\ mouseClicked(java.awt.event.MouseEvent)
+numComments=9

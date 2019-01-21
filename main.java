@@ -17,7 +17,6 @@ private int boardFieldLengthY;
 //private Frame window;
 private board spielbrett;
 private Frame window;
-private EventHandler event;
 
 public main()
 {
@@ -28,11 +27,10 @@ public main()
        this.fieldRenderSize      = 36;
        
        this.spielbrett = new board(fieldRenderSize, fieldRenderSize);
-       this.window = new EventHandler(boardFieldLengthX, boardFieldLengthY, fieldRenderSize);
        
        //Render Window with frame 
-       //this.window = this.event.render(boardFieldLengthX, boardFieldLengthY, fieldRenderSize);
-       //this.window = this.render(this.boardFieldLengthX*this.fieldRenderSize+(2*fieldRenderSize), this.boardFieldLengthY*this.fieldRenderSize+(2*fieldRenderSize));
+       this.window = this.render(this.boardFieldLengthX*this.fieldRenderSize+(2*fieldRenderSize), this.boardFieldLengthY*this.fieldRenderSize+(2*fieldRenderSize));
+       
        //Board offset by one fieldRenderSize
        this.spielbrett.render(fieldRenderSize, fieldRenderSize, this.window);
        
@@ -42,14 +40,12 @@ public main()
        player player2   = new player(true, "Weiss");
        rules ruleset    = new rules();
        
-       System.out.println("X: ");
-       
-       while(! ruleset.gameOver()     ){
+       while(! ruleset.gameOver() ){
 
        }
     }
      
-    /*
+    
     public Frame render(int x, int y){
        Frame f = new Frame("Chess Game");
        f.setLayout(null);  
@@ -57,5 +53,5 @@ public main()
        f.setVisible(true);
        
        return f;
-    }*/
+    }
 }
