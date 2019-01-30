@@ -41,7 +41,7 @@ public main()
        rules ruleset    = new rules();
        
        while(! ruleset.gameOver() ){
-
+            
        }
     }
      

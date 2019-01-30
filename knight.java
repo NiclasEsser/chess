@@ -28,23 +28,32 @@ public class knight extends figure
         /*
          * ---- rules where movement is allowed
          */
-        for(int xoff = 2; xoff<=3; xoff++){
-            for(int yoff = 2; yoff<=3; yoff++){
-                //Generate paris of [2][3] ....to [-2][-3]
-                if(xoff!=yoff){
-					//Check outer boundaries
-                    if(	(x+xoff)<feld.getBoardSize()[0] && (x+xoff)<feld.getBoardSize()[0]){
-						allowedFields[x+xoff][y+yoff] = true;
-					}
-					
-					//Check outer boundaries
-					if(	(x-xoff)>0 && (x-xoff)>=0){
-						allowedFields[x-xoff][y-yoff] = true;
-					}
+       
+        //Generate paris of [2][3] ....to [-2][-3]
+        for(int direction = -1; direction <=1; direction+=2){
+            for(int xoff = 2; xoff<=3; xoff++){
+                for(int yoff = 2; yoff<=3; yoff++){
+                    //Only allow 
+                    if(xoff!=yoff){
+                        int xnew = x+(xoff*direction);
+                        int ynew = y+(yoff*direction);
+                        
+                        //Check outer boundaries
+                        int xmax = feld.getBoardSize()[0];
+                        int ymax = feld.getBoardSize()[1];                        
+                        
+                        if(xnew <= xmax && ynew <= ymax && xnew>=0 && ynew>=0){
+                            //Allow movement if field is empty or enemy figure
+                            boardField desiredField = feld.playingBoard[xnew][ynew];
+                            if( (   !desiredField.isOccupied() ) || (     desiredField.isOccupied() &&  desiredField.getFigure().color != this.color)   ){
+                                allowedFields[xnew][ynew] = true;
+                            }
+                        }
+                    }
                 }
-            }
         }
-        
-        return allowedFields;
     }
+    
+    return allowedFields;
+}
 }
