@@ -6,7 +6,7 @@ Dieses Java-Projekt ist eine Implementierung des Brettspiels Schach.
 
 Das allgemeine Ziel ist es, den beteiligten Studenten grundlegenden Prinzipen der objektorientierten Programmierung (OOP) in Java näher zu bringen.
 
-Das Projektziel ist die Umsetzung eines Schachspiels unter Berücksichtigung der folgenden Aspekte:
+Das Projektziel ist die Programmierung eines Schachspiels unter Berücksichtigung der folgenden Aspekte:
 
 * Abstraktion des Spielablaufs durch klassenbasierte Programmierung
 * Umsetzung verschiedener Eigenschaften der OOP (z.B. Polymorphie)
@@ -16,10 +16,10 @@ Das Projektziel ist die Umsetzung eines Schachspiels unter Berücksichtigung der
 
 ## Vorgehensweise
 
-Bei der OOP ist es besonders wichtig, vor der Programmierung eine genaue Struktur für die Implementierung anzufertigen. Dies umfasst nicht nur den Programmcode und die Klassenstruktur, sondern auch die Wahl geeigneter Software und die Aufteilung der Arbeitspakete.
+Bei der OOP ist es besonders wichtig, vor der Programmierung eine genaue Struktur für die Implementierung anzufertigen. Dies umfasst nicht nur den Programmcode und die Klassenstruktur, sondern auch die Wahl geeigneter Softwares und die Aufteilung der Arbeitspakete.
 
 
-### Wahl geeigneter Software
+### Wahl geeigneter Softwares
 
 Für die Programmierarbeit in einem Team, ist die Versionskontrolle des Programmcodes nicht mehr wegzudenken. Eine moderne Software, die Programmcode einer Versionskontrolle unterzieht, ist Git. Es gibt verschiedene Plattformen, die Server zur Verfügung stellen, auf denen der Kunde seine eigenen Git-Repositorys erstellen kann. Eine Plattform ist GitHub, welches in der Open-Source Community sehr beliebt ist. Öffentliche Repositorys laden die Community zur Mitentwicklung an Projekten gerade zu ein. Deshalb haben wir uns für *GitHub* und der zugehörigen Oberfläche *GitHub Desktop* entschieden.
 
@@ -63,4 +63,4 @@ Der Austausch über Git in einer Teamarbeit, war für alle eine neue Erfahrung, 
 
 * **Stephan Wahlen** - *Initial work and Figure validation* - [Metalheim](https://github.com/metalheim)
 * **Benjamin Horn** - *Documenation and management* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Niclas Esser** - *Figure validation and EventHandler* - [Niclas Esser](https://github.com/NiclasEsser)
+* **Niclas Esser** - *Documenation, Figure validation and EventHandler* - [Niclas Esser](https://github.com/NiclasEsser)
