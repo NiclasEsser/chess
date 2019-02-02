@@ -4,7 +4,7 @@ Dieses Java-Projekt ist eine Implementierung des Brettspiels Schach.
 
 ## Ziel
 
-Das allgemeine Ziel ist es, den beteiligten Studenten grundlegende Prinzpien der objektorientierten Programmierung (OOP) in Java näher zu bringen.
+Das allgemeine Ziel ist es, den beteiligten Studenten grundlegenden Prinzipen der objektorientierten Programmierung (OOP) in Java näher zu bringen.
 
 Das Projektziel ist die Umsetzung eines Schachspiels unter Berücksichtigung der folgenden Aspekte:
 
@@ -27,24 +27,24 @@ Unter den vielen Java-IDEs auf dem Markt, fällt es schwer die richtige Wahl zu 
 
 ### Klassenstruktur
 
-Die Klassenstruktur des Schachspiels zeigt nachstehnde Abbildung
+Die Klassenstruktur des Schachspiels zeigt nachstehende Abbildung
 ![alt text](https://github.com/NiclasEsser/chess/blob/master/doc/UML.PNG)
 
 ### Arbeitspakete
 
 * 1.) Erstellen eines Grundkonzepts (Klassen, Attribute, Set- und Get-Methoden)
-* 2.) Visualsierung von Spielbrett und Figuren
+* 2.) Visualisierung von Spielbrett und Figuren
 * 3.) Validierung der Züge einzelner Figuren
 * 4.) Interaktion der Spieler durch MouseListener-Klasse
 * 5.) Entwicklung einer Testautomation
 * 6.) Erweiterung des Regelwerks (Schach, Patt, Rochade, spezielle Bauernregel)
 * 7.) Weitere visuelle Aspekte (Anzahl Züge, Zeit) (optional)
-* 8.) Erstellung einer ausührbaren Datei, die das Schachspiel startet (optional)
+* 8.) Erstellung einer ausführbaren Datei, die das Schachspiel startet (optional)
 
 ## Verwendete Java-Bibliotheken aus dem Java SE Development Kit (JDK)
 
 ## To Do's
-Das Schachspiel wurde bis Arbeitspaket (4) erfolgreich programmiert, sodass die Bewegung einzelner Figuren möglich ist. Allerdings sind die Züge noch unabhängig von der Player-Klasse und das Regelwerk ist ebenfalls noch nicht implementiert. Ein problemloser Spielablauf ist daher noch nicht möglch. In den nächsten Schritten sind diese Aspekte noch umzusetzten. Zusätzlich muss auch eine Testautomation programmiert werden, die einzelne Klassen testet und auf Fehler überprüft. Im Anschluss können optionale Arbeitspakete programmiert werden, um die Spielumgebung anwenderfreundlicher zu gestalten.
+Das Schachspiel wurde bis Arbeitspaket (4) erfolgreich programmiert, sodass die Bewegung einzelner Figuren möglich ist. Allerdings sind die Züge noch unabhängig von der Player-Klasse und das Regelwerk ist ebenfalls noch nicht implementiert. Ein problemloser Spielablauf ist daher noch nicht möglich. In den nächsten Schritten sind diese Aspekte noch umzusetzen. Zusätzlich muss auch eine Testautomation programmiert werden, die einzelne Klassen testet und auf Fehler überprüft. Im Anschluss können optionale Arbeitspakete programmiert werden, um die Spielumgebung anwenderfreundlicher zu gestalten.
 
 ## Spiel starten
 
@@ -52,9 +52,11 @@ Das Schachspiel wurde bis Arbeitspaket (4) erfolgreich programmiert, sodass die 
 
 ## Fazit
 
-Das Team konnte verschiedene Prinzipien der OOP erlernen und umsetzen, wie die Polymorphie durch die Umsetzung der abstrakten UI- und Figure-Klasse. Auch das Geheimnisprinzip einzelner Klassen wurde durch die verwendung von ``private type attribute``  eingehalten, sodass der Zugriff auf Attribute nur durch Get- und Set-Methoden möglich ist. Probleme traten bei der Kapselung zwischen der Board- und Boardfield-Klasse durch den EventHandler auf. Beide Klassen wiesen Abhängigkeiten beim Ausführen der Züge auf. Im Punkte Lesbarkeit gibt es ebenfalls Kritikpunkte, da im Quelltext ein englisch-deutsch Mix enstanden ist. Dieser rührt daher, dass verschiedene Personen mit unterschiedlichen Programmierstilen an dem Projekt beteiligt waren. Bei der Projektstrukturierung wurde der Aspekt der Lesbarkeit zu unrecht nicht geklärt.
+Das Team konnte verschiedene Prinzipien der OOP erlernen und umsetzen, wie die Polymorphie durch die Umsetzung der abstrakten UI- und Figure-Klasse. Auch das Geheimnisprinzip einzelner Klassen wurde durch die Verwendung von ``private type attribute``  eingehalten, sodass der Zugriff auf Attribute nur durch Get- und Set-Methoden möglich ist. Probleme traten bei der Kapselung zwischen der Board- und Boardfield-Klasse durch den EventHandler auf. Beide Klassen wiesen Abhängigkeiten beim Ausführen der Züge auf.
 
-Der Austausch über Git in einer Teamarbeit, war für das alle eine neue Erfahrung, die zukunftsweisend ist. Außerdem konnte jeder neue Programmiererfahrung mit Java lernen.
+Im Punkte Lesbarkeit gibt es ebenfalls Kritikpunkte, da im Quelltext ein englisch-deutsch Mix entstanden ist. Dieser rührt daher, dass verschiedene Personen mit unterschiedlichen Programmierstilen an dem Projekt beteiligt waren. Bei der Projektstrukturierung wurde der Aspekt der Lesbarkeit zu Unrecht nicht geklärt.
+
+Der Austausch über Git in einer Teamarbeit, war für alle eine neue Erfahrung, die zukunftsweisend ist. Außerdem konnte jeder neue Programmiererfahrung mit Java lernen.
 
 
 ## Authors
