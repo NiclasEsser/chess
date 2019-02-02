@@ -44,15 +44,17 @@ Die Klassenstruktur des Schachspiels zeigt nachstehnde Abbildung
 ## Verwendete Java-Bibliotheken aus dem Java SE Development Kit (JDK)
 
 ## To Do's
+Das Schachspiel wurde bis Arbeitspaket (4) erfolgreich programmiert, sodass die Bewegung einzelner Figuren möglich ist. Allerdings sind die Züge noch unabhängig von der Player-Klasse und das Regelwerk ist ebenfalls noch nicht implementiert. Ein problemloser Spielablauf ist daher noch nicht möglch. In den nächsten Schritten sind diese Aspekte noch umzusetzten. Zusätzlich muss auch eine Testautomation programmiert werden, die einzelne Klassen testet und auf Fehler überprüft. Im Anschluss können optionale Arbeitspakete programmiert werden, um die Spielumgebung anwenderfreundlicher zu gestalten.
 
 ## Spiel starten
 
 
 
-## Ergebnis
+## Fazit
 
-Das Schachspiel wurde bis Arbeitspaket (4) erfolgreich programmiert, sodass die Bewegung einzelner Figuren möglich ist. Allerdings sind die Züge noch unabhängig von der Player-Klasse und das Regelwerk ist ebenfalls noch nicht implementiert. Ein problemloser Spielablauf ist daher noch nicht möglch. In den nächsten Schritten sind diese Aspekte noch umzusetzten. Zusätzlich muss auch eine Testautomation programmiert werden, die einzelne Klassen testet und auf Fehler überprüft. Im Anschluss können optionale Arbeitspakete programmiert werden, um die Spielumgebung anwenderfreundlicher zu gestalten.
+Das Team konnte verschiedene Prinzipien der OOP erlernen und umsetzen, wie die Polymorphie durch die Umsetzung der abstrakten UI- und Figure-Klasse. Auch das Geheimnisprinzip einzelner Klassen wurde durch die verwendung von ``private type attribute``  eingehalten, sodass der Zugriff auf Attribute nur durch Get- und Set-Methoden möglich ist. Probleme traten bei der Kapselung zwischen der Board- und Boardfield-Klasse durch den EventHandler auf. Beide Klassen wiesen Abhängigkeiten beim Ausführen der Züge auf. Im Punkte Lesbarkeit gibt es ebenfalls Kritikpunkte, da im Quelltext ein englisch-deutsch Mix enstanden ist. Dieser rührt daher, dass verschiedene Personen mit unterschiedlichen Programmierstilen an dem Projekt beteiligt waren. Bei der Projektstrukturierung wurde der Aspekt der Lesbarkeit zu unrecht nicht geklärt.
 
+Der Austausch über Git in einer Teamarbeit, war für das alle eine neue Erfahrung, die zukunftsweisend ist. Außerdem konnte jeder neue Programmiererfahrung mit Java lernen.
 
 
 ## Authors
