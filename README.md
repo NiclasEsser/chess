@@ -28,7 +28,7 @@ Unter den vielen Java-IDEs auf dem Markt, fällt es schwer die richtige Wahl zu 
 ### Klassenstruktur
 
 Die Klassenstruktur des Schachspiels zeigt nachstehnde Abbildung
-![alt text](https://github.com/NiclasEsser/chess/doc/UML.png)
+![alt text](https://github.com/NiclasEsser/chess/blob/master/doc/UML.PNG)
 
 ### Arbeitspakete
 
