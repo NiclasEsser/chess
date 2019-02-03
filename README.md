@@ -16,8 +16,8 @@ Das Projektziel ist die Programmierung eines Schachspiels unter Berücksichtigun
 
 ## Vorgehensweise
 
-Bei der OOP ist es besonders wichtig, vor der Programmierung eine genaue Struktur für die Implementierung anzufertigen. Dies umfasst nicht nur den Programmcode und die Klassenstruktur, sondern auch die Wahl geeigneter Softwares und die Aufteilung der Arbeitspakete.
-
+Bei der OOP ist es besonders wichtig, vor der Programmierung eine genaue Struktur für die Implementierung anzufertigen. 
+Dies umfasst nicht nur den Programmcode und die Klassenstruktur, sondern auch die Wahl geeigneter Softwares und die Aufteilung der Arbeitspakete.
 
 ### Wahl geeigneter Softwares
 
@@ -40,10 +40,12 @@ Unter den vielen Java-IDEs auf dem Markt, fällt es schwer die richtige Wahl zu 
 Viele IDEs (z.B. [Eclipse](https://www.eclipse.org/) ) bieten umfangreiche Funktionen und Erweiterungen (Plug-Ins) an, was den Umgang mit der IDE häufig erschwert. 
 Da unser Team bisher kaum Erfahrungen mit Java gesammelt hat, war es uns wichtig eine möglichst einsteigerfreundliche IDE zu finden. Aus diesem Grund haben wir uns für [*BlueJ*](https://www.bluej.org/) entschieden.
 
-#### Klassenstruktur
+#### Klassenstruktur / Statik
 
-Die Klassenstruktur des Schachspiels zeigt nachstehende Abbildung
+Die Klassenstruktur des Schachspiels zeigt nachstehende Abbildung aus der Projektübersicht der IDE BlueJ
 ![Visuelle repräsentation der Klassenstruktur von Schach](https://github.com/NiclasEsser/chess/blob/master/doc/UML.PNG)
+
+##### UML Diagramm
 
 ### Arbeitspakete
 
@@ -69,11 +71,13 @@ Es wurden insbesondere folgende Elemente aus dem AWT verwendet:
 #### Darstellung 
 
 Für die Darstellung wurden die Funktionen aus *java.awt.Canvas* verwendet, mit Hilfe dessen einfache graphische Strukturen (Kreise, Rechtecke, Text etc.)
-auf einen Bereich des Bildschirms gerendert werden können.
+auf einen Bereich des Bildschirms gerendert werden können. Jedes Element (Figuren, Brett, Brett-Felder) erweitern die Klasse UI, die wiederum die Classe 
+Canvas aus dem AW-Toolkit erweitert.
 
 #### Event Handling
 
-* java.awt.event
+Um Benutzereingaben in der GUI abzufangen und auszuwerten wurden die Event-Handling Funktionen der Klasse *java.awt.event* verwendet.
+Dadurch ist u.a. der Zugriff auf bestimmte Mausgesten (z.B. Doppelklick) möglich, sowie die Positionsabfrage des Mauszeigers.
 
 ## To Do's
 Das Schachspiel wurde bis Arbeitspaket (4) erfolgreich programmiert, sodass die Bewegung einzelner Figuren möglich ist. Allerdings sind die Züge noch unabhängig von der Player-Klasse und das Regelwerk ist ebenfalls noch nicht implementiert. Ein problemloser Spielablauf ist daher noch nicht möglich. In den nächsten Schritten sind diese Aspekte noch umzusetzen. Zusätzlich muss auch eine Testautomation programmiert werden, die einzelne Klassen testet und auf Fehler überprüft. Im Anschluss können optionale Arbeitspakete programmiert werden, um die Spielumgebung anwenderfreundlicher zu gestalten.
