@@ -21,14 +21,29 @@ Bei der OOP ist es besonders wichtig, vor der Programmierung eine genaue Struktu
 
 ### Wahl geeigneter Softwares
 
-Für die Programmierarbeit in einem Team, ist die Versionskontrolle des Programmcodes nicht mehr wegzudenken. Eine moderne Software, die Programmcode einer Versionskontrolle unterzieht, ist Git. Es gibt verschiedene Plattformen, die Server zur Verfügung stellen, auf denen der Kunde seine eigenen Git-Repositorys erstellen kann. Eine Plattform ist GitHub, welches in der Open-Source Community sehr beliebt ist. Öffentliche Repositorys laden die Community zur Mitentwicklung an Projekten gerade zu ein. Deshalb haben wir uns für *GitHub* und der zugehörigen Oberfläche *GitHub Desktop* entschieden.
+#### Versionskontrolle
 
-Unter den vielen Java-IDEs auf dem Markt, fällt es schwer die richtige Wahl zu treffen. Viele IDEs (z.B. Eclipse) bieten umfangreiche Funktionen und Erweiterungen (Plug-Ins) an, was den Umgang mit der IDE häufig erschwert. Da unser Team bisher kaum Erfahrungen mit Java gesammelt hat, war es uns wichtig eine möglichst einsteigerfreundliche IDE zu finden. Aus diesem Grund haben wir uns für *BlueJ* entschieden.
+Für die Programmierarbeit in einem Team, ist die Versionskontrolle des Programmcodes nicht mehr wegzudenken. 
+Eine moderne Software, die Programmcode einer Versionskontrolle unterzieht, ist Git. 
+Es gibt verschiedene Plattformen, die Server zur Verfügung stellen, auf denen der Kunde seine eigenen Git-Repositorys erstellen kann. 
+Eine Plattform ist GitHub, welches in der Open-Source Community sehr beliebt ist. 
+Öffentliche Repositorys laden die Community zur Mitentwicklung an Projekten gerade zu ein. Deshalb haben wir uns für [*GitHub*](http://github.com) und der zugehörigen Oberfläche *GitHub Desktop* entschieden.
+
+#### Konzeptionierung als UML Diagramm 
+
+In der Abstraktionsphase wurden die Funktionen eines realen Schachspiels auf Funktionsblöcke zurückgeführt, die in der Umsetzungsphase 
+Klassen entsprechen. Für die Planung und Darstellung wurde das freie UML Werkzeug [StarUML](http://staruml.io/) verwendet, da es einen großen
+Funktionsumfang (Round-Trip-Engineering, Java Unterstützung) bietet und unter einer gemeinfreien Lizenz steht.
+
+#### IDE
+Unter den vielen Java-IDEs auf dem Markt, fällt es schwer die richtige Wahl zu treffen. 
+Viele IDEs (z.B. [Eclipse](https://www.eclipse.org/) ) bieten umfangreiche Funktionen und Erweiterungen (Plug-Ins) an, was den Umgang mit der IDE häufig erschwert. 
+Da unser Team bisher kaum Erfahrungen mit Java gesammelt hat, war es uns wichtig eine möglichst einsteigerfreundliche IDE zu finden. Aus diesem Grund haben wir uns für [*BlueJ*](https://www.bluej.org/) entschieden.
 
 ### Klassenstruktur
 
 Die Klassenstruktur des Schachspiels zeigt nachstehende Abbildung
-![alt text](https://github.com/NiclasEsser/chess/blob/master/doc/UML.PNG)
+![Visuelle repräsentation der Klassenstruktur von Schach](https://github.com/NiclasEsser/chess/blob/master/doc/UML.PNG)
 
 ### Arbeitspakete
 
@@ -42,6 +57,7 @@ Die Klassenstruktur des Schachspiels zeigt nachstehende Abbildung
 * 8.) Erstellung einer ausführbaren Datei, die das Schachspiel startet (optional)
 
 ## Verwendete Java-Bibliotheken aus dem Java SE Development Kit (JDK)
+
 
 ## To Do's
 Das Schachspiel wurde bis Arbeitspaket (4) erfolgreich programmiert, sodass die Bewegung einzelner Figuren möglich ist. Allerdings sind die Züge noch unabhängig von der Player-Klasse und das Regelwerk ist ebenfalls noch nicht implementiert. Ein problemloser Spielablauf ist daher noch nicht möglich. In den nächsten Schritten sind diese Aspekte noch umzusetzen. Zusätzlich muss auch eine Testautomation programmiert werden, die einzelne Klassen testet und auf Fehler überprüft. Im Anschluss können optionale Arbeitspakete programmiert werden, um die Spielumgebung anwenderfreundlicher zu gestalten.
