@@ -40,7 +40,7 @@ Unter den vielen Java-IDEs auf dem Markt, fällt es schwer die richtige Wahl zu 
 Viele IDEs (z.B. [Eclipse](https://www.eclipse.org/) ) bieten umfangreiche Funktionen und Erweiterungen (Plug-Ins) an, was den Umgang mit der IDE häufig erschwert. 
 Da unser Team bisher kaum Erfahrungen mit Java gesammelt hat, war es uns wichtig eine möglichst einsteigerfreundliche IDE zu finden. Aus diesem Grund haben wir uns für [*BlueJ*](https://www.bluej.org/) entschieden.
 
-### Klassenstruktur
+#### Klassenstruktur
 
 Die Klassenstruktur des Schachspiels zeigt nachstehende Abbildung
 ![Visuelle repräsentation der Klassenstruktur von Schach](https://github.com/NiclasEsser/chess/blob/master/doc/UML.PNG)
@@ -56,8 +56,24 @@ Die Klassenstruktur des Schachspiels zeigt nachstehende Abbildung
 * 7.) Weitere visuelle Aspekte (Anzahl Züge, Zeit) (optional)
 * 8.) Erstellung einer ausführbaren Datei, die das Schachspiel startet (optional)
 
-## Verwendete Java-Bibliotheken aus dem Java SE Development Kit (JDK)
+### Verwendete Java-Bibliotheken aus dem Java SE Development Kit (JDK)
 
+Für die Einbindung einer graphischen Benutzeroberfläche (GUI) und eines EventHandlers zur Eingabe von Nutzerdaten
+wurden Bibliotheken aus dem JDK benutzt. Dazu wurde auf das [Abstract Window Toolkit (AWT)](https://de.wikipedia.org/wiki/Abstract_Window_Toolkit)
+zurückgegriffen. AWT stellt das so genannte Heavyweight-Framework zur Darstellung von Steuerelementen dar. 
+Das bedeutet, dass AWT die nativen GUI-Komponenten des jeweiligen Betriebssystems zur Darstellung verwendet und damit Plattform-unabhängig ein 
+natives Benutzererlebnis bietet.
+
+Es wurden insbesondere folgende Elemente aus dem AWT verwendet:
+
+#### Darstellung 
+
+Für die Darstellung wurden die Funktionen aus *java.awt.Canvas* verwendet, mit Hilfe dessen einfache graphische Strukturen (Kreise, Rechtecke, Text etc.)
+auf einen Bereich des Bildschirms gerendert werden können.
+
+#### Event Handling
+
+* java.awt.event
 
 ## To Do's
 Das Schachspiel wurde bis Arbeitspaket (4) erfolgreich programmiert, sodass die Bewegung einzelner Figuren möglich ist. Allerdings sind die Züge noch unabhängig von der Player-Klasse und das Regelwerk ist ebenfalls noch nicht implementiert. Ein problemloser Spielablauf ist daher noch nicht möglich. In den nächsten Schritten sind diese Aspekte noch umzusetzen. Zusätzlich muss auch eine Testautomation programmiert werden, die einzelne Klassen testet und auf Fehler überprüft. Im Anschluss können optionale Arbeitspakete programmiert werden, um die Spielumgebung anwenderfreundlicher zu gestalten.
